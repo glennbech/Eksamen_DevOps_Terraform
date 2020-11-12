@@ -7,13 +7,12 @@ branches:
   only:
   - master
 before_install:
-- openssl aes-256-cbc -K $encrypted_3c5a3a9bc373_key -iv $encrypted_3c5a3a9bc373_iv
-  -in eksamen-devops-d3394a9d2905.json.enc -out eksamen-devops-d3394a9d2905.json -d
+- openssl aes-256-cbc -K $encrypted_40d97da57ddf_key -iv $encrypted_40d97da57ddf_iv -in eksamen-devops-f7bc3c2f300a.json.enc -out eksamen-devops-f7bc3c2f300a.json -d
 - curl https://sdk.cloud.google.com | bash > /dev/null
 - source "$HOME/google-cloud-sdk/path.bash.inc"
-- gcloud auth activate-service-account --key-file=eksamen-devops-d3394a9d2905.json
+- gcloud auth activate-service-account --key-file=eksamen-devops-f7bc3c2f300a.json
 - gcloud config set project "${GCP_PROJECT_ID}"
-- export GOOGLE_APPLICATION_CREDENTIALS=./eksamen-devops-d3394a9d2905.json
+- export GOOGLE_APPLICATION_CREDENTIALS=./eksamen-devops-f7bc3c2f300a.json
 - wget https://releases.hashicorp.com/terraform/"$tf_version"/terraform_"$tf_version"_linux_amd64.zip
 - unzip terraform_"$tf_version"_linux_amd64.zip
 - sudo mv terraform /usr/local/bin/
