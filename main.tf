@@ -1,11 +1,12 @@
 resource "google_cloud_run_service" "default" {
-  name     = "cloudrun-srv"
+  name     = "eksamen-cloud-run"
   location = "us-central1"
+  project = "eksamen-devops"
 
   template {
     spec {
       containers {
-        image = "gcr.io/cloudrun/hello"
+        image = "gcr.io/eksamen-devops/eksamen-devops-docker-gcp"
       }
     }
   }
