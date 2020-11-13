@@ -7,6 +7,11 @@ resource "google_cloud_run_service" "default" {
     spec {
       containers {
         image = "gcr.io/eksamen-devops/eksamen-devops-docker-gcp@sha256:d430c2a72604e3c84c697f1043e1fc15f1122a1150d1a3cd7ab0df1c01906fd3"
+        resources {
+          limits = {
+            memory = "512Mi"
+          }
+        }
       }
     }
   }
