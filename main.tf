@@ -16,6 +16,8 @@ resource "google_cloud_run_service" "default" {
 
 
 
+
+
 data "google_iam_policy" "noauth" {
   binding {
     role = "roles/run.invoker"
