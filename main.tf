@@ -6,7 +6,7 @@ resource "google_cloud_run_service" "default" {
   template {
     spec {
       containers {
-        image = "gcr.io/eksamen-devops/eksamen-devops-docker-gcp@sha256:d0c370b2b9d5351ee6b206e8f0b25b1eaf8caf2e36306884647c83b0b200bab9"
+        image = "gcr.io/eksamen-devops/eksamen-devops-docker-gcp@sha256:8c7c46386ef5f97dabd52e68c3b63f1b2f446fbb5cb394898d1e7c91960ddf79"
       }
     }
   }
