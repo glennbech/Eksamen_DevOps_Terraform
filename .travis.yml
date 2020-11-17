@@ -3,11 +3,14 @@ env:
   - GCP_PROJECT_ID=eksamen-devops
   - tf_version=0.12.19
   - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+  - secure: IbjjIvFF1yg3KdKohQXoLgf9qeQrInvYuRuuGUEGJUvjDO+z+PJKgN41r7e2Ja8mLJK6YcEBMkzsB4w/iv0Gk+mtAzdWbvs8/7ZefzpjM703foNCzucOLGaGZx+0qU2++jQ+LbBUnbuCuydZvcv149Xt7OgKqizwOc2/hQ7L6XH1bY+p7sd1xq+17QtAaPhALr7fZcEVBimdtqKgJikw7XDA+6/QJxFv2kBcoZcaxJUsJPIvqvz8fN3I4H0rN9ILpp9icDxQMRq94YKayZrj4MtIdjqCtjFQeSJOsVFXK0UjavnEkUi5WgIYulhiDLBT8j85LACogthrcBrpA7WupIycmwv2Z57asUPnJvv6N+4xFaZD9V1CacMtuDrcvIsh8h/JdzLkw60xNvRA6Ymn1mhb6jjtIC5OZjP4PXYNAMO/mDuQTWsl3+63u/d4ZzyjGiYtLd2s4t5e7tF0ZzqGLunbj7GXSOM63I7QMjgpEQYw0Zx2EurSumhezu+h5UtOVfiYFxAAhuA6gu2OY9cL2SEo1CvJVR/2/+gAYWYSDcZ3LjLBnnAM6szm4IiaA6f44Gd6Mm35ec3tZLs3X/5l2cUxua4qnkfY6LudRpmTh+rGB6EaXvZ7/t6G1pxsVMyZXgBqTAPZKrWq7RQjXmFhE8mQl9BmSYmP3XMjaJcH73A=
+  - secure: I8HjBlgq0xXPbel+MreuT7CsVFQGbXgb8NwO/MvsS5TQZhC4lykzxaX/C+SFH6c4bwz/3LU11+XvqwEpNNEsFCC0X2PYl84xN03ujBqnR3Q/tLnjiUbdJqwZsEleEqPQbkuS8bb4kbNCHBBpXUy12hUjtNRlmOeYBTyeMCZwRHWCOIpyWm7wrmEF5kR9t62KxpYVIOPv32IFEcn04xTWU7Nw+Y+k941c5iIEFiIcKKrmt5xGdsw3Oo2yQk+gbhOopzia1bAKjSqvOGr2uH9r5NwD8V9/CkKd4cbY52rurOOQJL7x9xbcAtJrkB852JbkM8UiauFBSPgPtcGC1IHY9Y8NPD4+E3DfMwVS64F8Ns+K+BvCopD4+Spy9J136qE/MQKyGpEhZX2GCAfcxmvOwxqHvRF51DL7JIKI4nyHONDKL7yfEDkAO4lelDAClR7Am7a9OncDWd55uunqfKYe+s94zdLUqDYJHhQmrMftdMTabQPUbHzEAxoBCqRoZikG5Lsb9zZ87Nel5kEBXx1aidbOX/Lv+Bj9Wk70aM9BUspY3E8B1Y/g5UZgSzjbPvOmtLlTPQ8wowSrIt4iUSzxnYDCT15JyARNimUOO6OMSaZa5XM2BgCI/dsdl3cyLMcfs1N6Hgme2Bs+vW2MlbqkYfUEBvieGoo9/CbgaZEVVjc=
 branches:
   only:
   - master
 before_install:
-- openssl aes-256-cbc -K $encrypted_40d97da57ddf_key -iv $encrypted_40d97da57ddf_iv -in eksamen-devops-f7bc3c2f300a.json.enc -out eksamen-devops-f7bc3c2f300a.json -d
+- openssl aes-256-cbc -K $encrypted_40d97da57ddf_key -iv $encrypted_40d97da57ddf_iv
+  -in eksamen-devops-f7bc3c2f300a.json.enc -out eksamen-devops-f7bc3c2f300a.json -d
 - curl https://sdk.cloud.google.com | bash > /dev/null
 - source "$HOME/google-cloud-sdk/path.bash.inc"
 - gcloud auth activate-service-account --key-file=eksamen-devops-f7bc3c2f300a.json
