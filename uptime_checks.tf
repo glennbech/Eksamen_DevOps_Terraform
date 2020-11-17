@@ -5,7 +5,7 @@ provider "statuscake" {
 resource "statuscake_test" "google" {
   test_type = "HTTP"
   website_name = "DevOps Eksamen"
-  website_url = "www.thisdoesnotexisthopefully123.com"
+  website_url = google_cloud_run_service.default.status[0].url
   check_rate = 10
-  contact_group = ["195037"]
+  contact_group = ["193689"]
 }
