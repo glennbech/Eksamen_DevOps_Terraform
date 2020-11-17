@@ -7,6 +7,10 @@ resource "google_cloud_run_service" "default" {
     spec {
       containers {
         image = "gcr.io/eksamen-devops/eksamen-devops-docker-gcp@sha256:c3583d737eaa96ed345cf18c88b6bab80264f5f5b529f4f9c3818ddfe6e74cb2"
+        env {
+          name = "LOGZ_TOKEN"
+          value = var.logz_token
+        }
         resources {
           limits = {
             memory = "512Mi"
