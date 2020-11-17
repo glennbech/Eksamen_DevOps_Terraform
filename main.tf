@@ -11,6 +11,10 @@ resource "google_cloud_run_service" "default" {
           name = "LOGZ_TOKEN"
           value = var.logz_token
         }
+        env {
+          name = "LOGZ_URL"
+          value = var.logz_url
+        }
         resources {
           limits = {
             memory = "512Mi"
