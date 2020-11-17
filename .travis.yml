@@ -1,7 +1,7 @@
 env:
   global:
   - GCP_PROJECT_ID=eksamen-devops
-  - tf_version=0.12.19
+  - tf_version=0.13.3
   - CLOUDSDK_CORE_DISABLE_PROMPTS=1
   - secure: iJNfOWID6zeR7kEUS8ayVohq4yVjJdMKlN/GACkjmMylJ2+33lTRAwDudRkMNbhL+9oXOJ/1wk2m3guPtu2xf3sMayvKXYjkBPRggS049hSR/MJGqKRq0ZDpHO2j57Ed37/JYNhX5hcU/VHU9GqxXCK7x9W8RYXgf7GSRxM44IjGY4LyNJztvp5H9pORxhUtyeaxYAUu/ERI4UnMaH1Aa9pUKhD8my4lj4rdMPuQAdrXIoYgwyVLyLM++sKDLGG6hNU7i+1+nq43bO7n1qHnmH1N+nUbI/+LZ/NXv8fTWkM0psbcXHmh6YxeoLKudLxrXt5QPj4W7iE0Y+LapLdhSkr9TFLAnOdN/cQfueUnnkyPwR7V8ae7ac8AvI8RstNnCvlCGlAzZACqA+l8zszp8YBAJDMDn6bLHk65U7Mpx2wsQcSmIH+ZkzhV2Qthoy6lYXbLMMDi4TjNNOOk3MFc2LXmo5xPmC4FwPP01MNp/8U+qe1Lyds3/RErlECZ+ft+HL3mwe1L2ISG9thplfw+Xm2E1bO9O2hT+dAmoCBp7c85RSIKJ+VPwyO3NSxN7vcq1wqagInQXmbNNmmU7N1Fl1LUffmJvi53bBSDa70WPG2BnJh7fk1vc/RUIQpcng1W+olxtjFXLDf8BoFbQ71l80hB3xa4SdGNYMjhKDFyp2I=
   - secure: Napnw/nwHb1+3lwfH3b1WSan+kMZvpW7sdk8d9nkeFtrSNNWfJpI3WPAGOF3gnbXUUL58vVH6C7ppIFdd9ewGuR92ewt62pXypYg4Q/BpcFllqzWsdSP36Y2fNjL8EdRKk1LsJf8U+5dKa0XWM/ePPAVYFXKhhun1sT2c63U5PVP7y+duNhZoGfw1W70pq98Ru5s0iWxxjSL+qNJCxIgU6JOyZJl/zTb6LQgiGCE2pMVlpBqYimhBSRVmwoDVomMH9JoGm2ghk1LCHifh7V6vxVNdix8tjsseaZ35tjvS3xaOFKEnBrqD9UNH4DXh/j51WXDVvNFYCzM2LnAcQxzLCuHvp8c44VHarrVpyILi+HwbPeawHnQL9rQQuNGFEHKhMWTg5q7ponSTUuBCKF0Y1OGwABpczysxF1a2Dl33T99CwoY3Hwui2SHc0PPz/Pz/r3Kdmy71ArsO3DfjQkF7erdFwc8saaE8bV7ztF05iYRIagrooVxyCANR5V2JXBWFMN5MCXhBRK5E8qsuXa/vGe+SDE8OIxqxRLBgI3vMWvptYmyGhzOyTUyzrDJHEr4QopsHTDHlZFNdyqfL3yd6sGyzGW/lYOC/fFM9bKF1ER09gfb0nYfo7GEvYU6PSOaiPUn0j+dgHiyiFYM6O/81D5TQEzQtfpeLxeNGypt8kg=
@@ -24,6 +24,7 @@ install: true
 script:
 - |-
   set -ex;
+  export TF_VAR_logz_token=$LOGZ_TOKEN
   terraform init
   terraform plan
   terraform apply --auto-approve
