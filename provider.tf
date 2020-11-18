@@ -23,4 +23,16 @@ provider "heroku" {
 resource "heroku_app" "default" {
   name = "eksamen-heroku-app"
   region = "us"
+
+}
+
+# Build code & release to the app
+resource "heroku_build" "example" {
+  app = "eksamen-heroku-app"
+  buildpacks = ["https://github.com/joakimstolen/Eksamen_DevOps_App.git"]
+
+  source = {
+    url = google_cloud_run_service.default.status[0].url
+    version = "2.1.1"
+  }
 }
