@@ -32,7 +32,7 @@ resource "heroku_build" "example" {
   buildpacks = ["https://github.com/joakimstolen/Eksamen_DevOps_App.git"]
 
   source = {
-    url = "Eksamen_DevOps_App-master.zip"
+    url = "https://github.com/joakimstolen/Eksamen_DevOps_App-master.zip"
     version = "2.1.1"
   }
 }
