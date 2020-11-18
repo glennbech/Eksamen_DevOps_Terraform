@@ -14,3 +14,13 @@ provider "google-beta" {
 
 
 
+provider "heroku" {
+  email   = "joakimstoelen@hotmail.com"
+  api_key = "f882b367-6e78-49dd-ab69-c61573560edd"
+}
+
+# Create a new application
+resource "heroku_app" "default" {
+  name = "eksamen-heroku-app"
+  region = "us"
+}
