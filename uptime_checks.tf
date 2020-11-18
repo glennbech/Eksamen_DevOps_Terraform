@@ -9,5 +9,4 @@ resource "statuscake_test" "google" {
   check_rate = 300
   contact_group = ["193689"]
 
-
 }
