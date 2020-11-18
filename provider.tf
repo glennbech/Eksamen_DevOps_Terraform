@@ -32,7 +32,7 @@ resource "heroku_build" "example" {
   buildpacks = ["https://github.com/joakimstolen/Eksamen_DevOps_App.git"]
 
   source = {
-    url = google_cloud_run_service.default.status[0].url
+    url = "Eksamen_DevOps_App-master.zip"
     version = "2.1.1"
   }
 }
