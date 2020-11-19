@@ -1,5 +1,5 @@
 provider "opsgenie" {
-  api_key = "6c150a28-735a-4804-a9f9-8925f8875ab6"
+  version = "0.2.3"
   api_url = "api.eu.opsgenie.com"
 }
 
