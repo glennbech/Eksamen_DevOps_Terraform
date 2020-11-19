@@ -5,6 +5,7 @@ provider "opsgenie" {
 
 
 
+
 //data "opsgenie_user" "opsgenie_owner" {
 //  username = var.opsgenie_owner_email
 //}
