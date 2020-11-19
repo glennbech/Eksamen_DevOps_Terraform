@@ -4,6 +4,8 @@ provider "opsgenie" {
 
 
 
+
+
 resource "opsgenie_user" "userEksamenOne" {
   full_name = "Test User"
   role = "User"
