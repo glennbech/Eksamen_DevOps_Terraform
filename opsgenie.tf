@@ -2,6 +2,10 @@ provider "opsgenie" {
   api_key = "6c150a28-735a-4804-a9f9-8925f8875ab6"
   api_url = "api.eu.opsgenie.com"
 }
+data "opsgenie_user" "opsgenie_owner" {
+  username = var.opsgenie_owner_email
+}
+
 
 resource "opsgenie_user" "userEksamenOne" {
   full_name = "Test User"
