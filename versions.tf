@@ -9,10 +9,7 @@ terraform {
     statuscake = {
       source = "terraform-providers/statuscake"
     }
-//    heroku = {
-//      source = "heroku/heroku"
-//      version = "3.0.1"
-//    }
+
     opsgenie = {
       source = "opsgenie/opsgenie"
       version = "0.5.1"
