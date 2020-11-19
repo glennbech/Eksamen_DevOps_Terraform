@@ -13,6 +13,7 @@ resource "opsgenie_user" "userEksamenOne" {
   timezone  = "Europe/Oslo"
 }
 
+
 resource "opsgenie_user" "userEksamenTwo" {
   full_name = "Another User"
   role = "User"
