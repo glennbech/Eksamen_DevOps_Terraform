@@ -1,6 +1,6 @@
 provider "opsgenie" {
 
-  api_url = "api.eu.opsgenie.com"
+  api_url = "api.opsgenie.com"
 }
 
 resource "opsgenie_user" "user1" {
