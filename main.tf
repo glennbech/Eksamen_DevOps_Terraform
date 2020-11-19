@@ -15,10 +15,6 @@ resource "google_cloud_run_service" "default" {
           name = "LOGZ_URL"
           value = var.logz_url
         }
-        env {
-          name = "OPSGENIE_API_KEY"
-          value = var.opsgenie_key
-        }
         resources {
           limits = {
             memory = "512Mi"
