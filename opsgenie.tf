@@ -5,19 +5,13 @@ provider "opsgenie" {
 
 
 
-
-//data "opsgenie_user" "opsgenie_owner" {
-//  username = var.opsgenie_owner_email
-//}
-//
-//
-//resource "opsgenie_user" "userEksamenOne" {
-//  full_name = "Test User"
-//  role = "User"
-//  username = "test@user.abc"
-//  locale    = "no_NO"
-//  timezone  = "Europe/Oslo"
-//}
+data "opsgenie_user" "userEksamenOne" {
+  full_name = "Test User"
+  role = "User"
+  username = "test@eksamenuser.com"
+  locale    = "no_NO"
+  timezone  = "Europe/Oslo"
+}
 //
 //resource "opsgenie_user" "userEksamenTwo" {
 //  full_name = "Another User"
