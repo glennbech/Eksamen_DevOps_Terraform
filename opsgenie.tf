@@ -1,7 +1,8 @@
 provider "opsgenie" {
-  api_key = var.opsgenie_key
   api_url = "api.opsgenie.com"
 }
+
+
 
 resource "opsgenie_user" "userEksamenOne" {
   full_name = "Test User"
@@ -19,6 +20,7 @@ resource "opsgenie_user" "userEksamenTwo" {
   locale    = "no_NO"
   timezone  = "Europe/Oslo"
 }
+
 
 
 resource "opsgenie_team" "testTeam" {
