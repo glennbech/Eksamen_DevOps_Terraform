@@ -20,22 +20,24 @@ resource "opsgenie_user" "userEksamenTwo" {
   locale    = "no_NO"
   timezone  = "Europe/Oslo"
 }
-//
-//
-//
-//resource "opsgenie_team" "testTeam" {
-//  name = "Team Test"
-//
-//  member {
-//    id = opsgenie_user.userEksamenOne.id
-//    role = "user"
-//  }
-//
-//  member {
-//    id = opsgenie_user.userEksamenTwo.id
-//    role = "user"
-//  }
-//}
+
+
+
+resource "opsgenie_team" "testTeam" {
+  name = "Team Test"
+
+  member {
+    id = opsgenie_user.userEksamenOne.id
+    role = "user"
+  }
+
+  member {
+    id = opsgenie_user.userEksamenTwo.id
+    role = "user"
+  }
+}
+
+
 //
 //resource "opsgenie_schedule" "mainschedule" {
 //  name = "main_schedule"
