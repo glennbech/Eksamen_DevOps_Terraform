@@ -6,7 +6,7 @@ resource "google_cloud_run_service" "default" {
   template {
     spec {
       containers {
-        image = "gcr.io/eksamen-devops/eksamen-devops-docker-gcp:latest"
+        image = "gcr.io/eksamen-devops/eksamen-devops-docker-gcp@sha256:0726925ad4dfcfe6175722a4468b9066d0a12b44ea4c15f636a65f5f02ce3fdf"
         env {
           name = "LOGZ_TOKEN"
           value = var.logz_token
