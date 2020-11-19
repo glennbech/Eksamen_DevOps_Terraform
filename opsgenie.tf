@@ -5,7 +5,7 @@ provider "opsgenie" {
 
 
 
-data "opsgenie_user" "userEksamenOne" {
+resource "opsgenie_user" "userEksamenOne" {
   full_name = "Test User"
   role = "User"
   username = "test@eksamenuser.com"
