@@ -12,14 +12,14 @@ resource "opsgenie_user" "userEksamenOne" {
   locale    = "no_NO"
   timezone  = "Europe/Oslo"
 }
-//
-//resource "opsgenie_user" "userEksamenTwo" {
-//  full_name = "Another User"
-//  role = "User"
-//  username = "another@user.abc"
-//  locale    = "no_NO"
-//  timezone  = "Europe/Oslo"
-//}
+
+resource "opsgenie_user" "userEksamenTwo" {
+  full_name = "Another User"
+  role = "User"
+  username = "anothertest@eksamenuser.com"
+  locale    = "no_NO"
+  timezone  = "Europe/Oslo"
+}
 //
 //
 //
