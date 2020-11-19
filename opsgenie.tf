@@ -3,7 +3,7 @@ provider "opsgenie" {
   api_url = "api.eu.opsgenie.com"
 }
 
-resource "opsgenie_user" "user1" {
+resource "opsgenie_user" "userEksamenOne" {
   full_name = "Test User"
   role = "User"
   username = "test@user.abc"
@@ -11,7 +11,7 @@ resource "opsgenie_user" "user1" {
   timezone  = "Europe/Oslo"
 }
 
-resource "opsgenie_user" "user2" {
+resource "opsgenie_user" "userEksamenTwo" {
   full_name = "Another User"
   role = "User"
   username = "another@user.abc"
@@ -25,12 +25,12 @@ resource "opsgenie_team" "testTeam" {
   name = "Team Test"
 
   member {
-    id = opsgenie_user.user1.id
+    id = opsgenie_user.userEksamenOne.id
     role = "user"
   }
 
   member {
-    id = opsgenie_user.user2.id
+    id = opsgenie_user.userEksamenTwo.id
     role = "user"
   }
 }
@@ -46,11 +46,11 @@ resource "opsgenie_schedule_rotation" "team1rotation" {
   type = "hourly"
   participant {
     type = "user"
-    id = opsgenie_user.user1.id
+    id = opsgenie_user.userEksamenOne.id
   }
 
   participant {
     type = "user"
-    id = opsgenie_user.user2.id
+    id = opsgenie_user.userEksamenTwo.id
   }
 }
