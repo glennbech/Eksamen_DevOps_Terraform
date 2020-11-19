@@ -1,7 +1,7 @@
 resource "google_cloud_run_service" "default" {
   name     = "eksamen-cloud-run-valid"
   location = "us-central1"
-  project = "eksamen-devops"
+  project = var.project_name
 
   template {
     spec {
