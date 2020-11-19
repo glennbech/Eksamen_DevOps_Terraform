@@ -25,14 +25,13 @@ resource "heroku_app" "default" {
   region = "us"
 
 }
-//
-//# Build code & release to the app
-//resource "heroku_build" "example" {
-//  app = "eksamen-heroku-app"
-//  buildpacks = ["https://github.com/joakimstolen/Eksamen_DevOps_App.git"]
-//
-//  source = {
-//    url = "https://github.com/joakimstolen/Eksamen_DevOps_App-master.zip"
-//    version = "2.1.1"
-//  }
-//}
+
+# Build code & release to the app
+resource "heroku_build" "example" {
+  app = "eksamen-heroku-app"
+
+  source = {
+    url = "https://github.com/joakimstolen/Eksamen_DevOps_App-master"
+    version = "2.1.1"
+  }
+}
