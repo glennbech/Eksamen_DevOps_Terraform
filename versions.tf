@@ -12,7 +12,7 @@ terraform {
 
     opsgenie = {
       source = "opsgenie/opsgenie"
-      version = "0.5.1"
+      version = "0.2.3"
     }
 
   }
