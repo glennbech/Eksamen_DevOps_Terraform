@@ -19,6 +19,8 @@ resource "opsgenie_user" "user2" {
   timezone  = "Europe/Oslo"
 }
 
+
+
 resource "opsgenie_team" "testTeam" {
   name = "Team Test"
 
