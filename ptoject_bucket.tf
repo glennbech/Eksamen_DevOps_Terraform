@@ -1,5 +1,5 @@
 resource "google_storage_bucket" "static-site" {
-  project = var.project_name
+  project = "eksamen-devops"
   name = "eksamen_bucket2"
   location = "EU"
 }
