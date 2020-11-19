@@ -23,6 +23,7 @@ resource "opsgenie_user" "userEksamenTwo" {
 
 
 
+
 resource "opsgenie_team" "testTeam" {
   name = "Team Test"
 
