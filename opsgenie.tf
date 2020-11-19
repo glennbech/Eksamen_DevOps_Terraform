@@ -2,8 +2,6 @@ provider "opsgenie" {
   api_url = "api.opsgenie.com"
 }
 
-
-
 resource "opsgenie_user" "userEksamenOne" {
   full_name = "Test User"
   role = "User"
@@ -12,7 +10,6 @@ resource "opsgenie_user" "userEksamenOne" {
   timezone  = "Europe/Oslo"
 }
 
-
 resource "opsgenie_user" "userEksamenTwo" {
   full_name = "Another User"
   role = "User"
@@ -20,8 +17,6 @@ resource "opsgenie_user" "userEksamenTwo" {
   locale    = "no_NO"
   timezone  = "Europe/Oslo"
 }
-
-
 
 resource "opsgenie_team" "testTeam" {
   name = "Team Test"
@@ -36,7 +31,6 @@ resource "opsgenie_team" "testTeam" {
     role = "user"
   }
 }
-
 
 
 resource "opsgenie_schedule" "mainschedule" {
