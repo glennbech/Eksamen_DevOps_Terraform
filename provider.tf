@@ -14,24 +14,24 @@ provider "google-beta" {
 
 
 
-provider "heroku" {
-  email   = "joakimstoelen@hotmail.com"
-  api_key = "f882b367-6e78-49dd-ab69-c61573560edd"
-}
+//provider "heroku" {
+//  email   = "joakimstoelen@hotmail.com"
+//  api_key = "f882b367-6e78-49dd-ab69-c61573560edd"
+//}
 
-# Create a new application
-resource "heroku_app" "default" {
-  name = "eksamen-heroku-app"
-  region = "us"
-
-}
-
-# Build code & release to the app
-resource "heroku_build" "example" {
-  app = "eksamen-heroku-app"
-
-  source = {
-    url = "https://github.com/joakimstolen/Eksamen_DevOps_App-master"
-    version = "2.1.1"
-  }
-}
+//# Create a new application
+//resource "heroku_app" "default" {
+//  name = "eksamen-heroku-app"
+//  region = "us"
+//
+//}
+//
+//# Build code & release to the app
+//resource "heroku_build" "example" {
+//  app = "eksamen-heroku-app"
+//
+//  source = {
+//    url = "https://github.com/joakimstolen/Eksamen_DevOps_App-master"
+//    version = "2.1.1"
+//  }
+//}
