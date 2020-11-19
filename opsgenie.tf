@@ -38,23 +38,23 @@ resource "opsgenie_team" "testTeam" {
 }
 
 
-//
-//resource "opsgenie_schedule" "mainschedule" {
-//  name = "main_schedule"
-//  owner_team_id = opsgenie_team.testTeam.id
-//}
-//
-//resource "opsgenie_schedule_rotation" "team1rotation" {
-//  schedule_id = opsgenie_schedule.mainschedule.id
-//  start_date = "2020-11-20T00:00:00Z"
-//  type = "hourly"
-//  participant {
-//    type = "user"
-//    id = opsgenie_user.userEksamenOne.id
-//  }
-//
-//  participant {
-//    type = "user"
-//    id = opsgenie_user.userEksamenTwo.id
-//  }
-//}
+
+resource "opsgenie_schedule" "mainschedule" {
+  name = "main_schedule"
+  owner_team_id = opsgenie_team.testTeam.id
+}
+
+resource "opsgenie_schedule_rotation" "team1rotation" {
+  schedule_id = opsgenie_schedule.mainschedule.id
+  start_date = "2020-11-20T00:00:00Z"
+  type = "hourly"
+  participant {
+    type = "user"
+    id = opsgenie_user.userEksamenOne.id
+  }
+
+  participant {
+    type = "user"
+    id = opsgenie_user.userEksamenTwo.id
+  }
+}
