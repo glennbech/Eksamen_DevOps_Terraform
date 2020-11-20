@@ -20,12 +20,12 @@ Eksamensoppgave for PGR301 DevOps i skyen på Høyskolen Kristiania. Dette er In
 * `travis encrypt OPSGENIE_API_KEY=<your_key> --add`
 * `travis encrypt TF_VAR_logz_url=<your_url> --add`
 * `travis encrypt TF_VAR_logz_token=<your_key> --add`
-##Status Cake
+## Status Cake
 Infrastrukturen bruker Status Cake for å overvåke applikasjonen. Sier ifra til varselgruppe om applikasjonen går opp eller ned (endrer status). Statuscake brukernavn og API-nøkkel må krypteres. 
 https://www.statuscake.com/
-##OpsGenie (Oppgave 6)
+## OpsGenie (Oppgave 6)
 Valgte OpsGenie til oppgave 6. OpsGenie er begrenset i bruken (gratis-versjon). Men det den hovedsakelig gjør i denne infrastrukturen er å sette opp grupper med brukere og lage timeplan for når hvilke brukere skal ha tilsyn for applikasjonen den er satt opp til. I oppgaven har jeg kun satt opp eksempelbrukere og eksempelgrupper. Infrastrukturen lager grupper med tilsynsbrukere og lager timeplan for når hvilke brukere skal ha tilsyn til applikasjonen.
 For å hente API-key, logg inn på OpsGenie og lag en API-nøkkel i settings. Denne skal encryptes via Travis encrypt.
 https://www.atlassian.com/software/opsgenie
-##Logzio
+## Logzio
 Logzio brukes til å sende logger fra applikasjonen til Logzio. Krypter logz URL og logz Tokenet ditt med Travis encrypt. 
